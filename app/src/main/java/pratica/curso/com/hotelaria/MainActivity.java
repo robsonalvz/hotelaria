@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity implements HotelListFragment.AoClicarNoHotel, SearchView.OnQueryTextListener,
-        MenuItemCompat.OnActionExpandListener{
+        MenuItemCompat.OnActionExpandListener, HotelDialogFragment.AoSalvarHotel{
     private FragmentManager mFragmentManager;
     private HotelListFragment mListFragment;
     @Override
@@ -48,8 +48,17 @@ public class MainActivity extends AppCompatActivity implements HotelListFragment
                 SobreDialogFragment dialogFragment = new SobreDialogFragment();
                 dialogFragment.show(getSupportFragmentManager(),"sobre");
                 break;
+            case R.id.action_new:
+                HotelDialogFragment hotelDialogFragment =  HotelDialogFragment.newInstance(null);
+                hotelDialogFragment.abrir(getSupportFragmentManager());
+                break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void salvouHotel(Hotel hotel) {
+        mListFragment.adicionar(hotel);
     }
 
     @Override
@@ -73,4 +82,5 @@ public class MainActivity extends AppCompatActivity implements HotelListFragment
         mListFragment.limparBusca();
         return true;
     }
+
 }
