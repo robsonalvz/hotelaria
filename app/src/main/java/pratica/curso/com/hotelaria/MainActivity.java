@@ -43,6 +43,12 @@ public class MainActivity extends AppCompatActivity implements HotelListFragment
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_info:
+                SobreDialogFragment dialogFragment = new SobreDialogFragment();
+                dialogFragment.show(getSupportFragmentManager(),"sobre");
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
 

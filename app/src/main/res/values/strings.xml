@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Hotelaria</string>
+    <string name="acao_pesquisar">Pesquisar</string>
+    <string name="acao_novo">Novo</string>
+    <string name="acao_info">Info</string>
+    <string name="hint_busca">Procurar pelo Hotel</string>
+    <string name="sobre_titulo">Dominando android</string>
+    <string name="sobre_mensagem">Desenvolvido por nglauber</string>
+    <string name="sobre_botao_site">Site</string>
 </resources>

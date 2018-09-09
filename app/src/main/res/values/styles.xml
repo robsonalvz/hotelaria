@@ -7,9 +7,6 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <string name="acao_pesquisar">Pesquisar</string>
-    <string name="acao_novo">Novo</string>
-    <string name="acao_info">Info</string>
-    <string name="hint_busca">Procurar pelo Hotel</string>
+
 
 </resources>
